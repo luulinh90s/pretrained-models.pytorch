@@ -24,4 +24,4 @@ input = torch.autograd.Variable(input_tensor,
 output_logits = model(input) # 1x1000
 #print(output_logits)
 #pdb.set_trace()
-print(((torch.max(output_logits).item()-output_logits)<0.01).nonzero())
+print(((torch.max(output_logits).item()-output_logits)<0.0001).nonzero())
